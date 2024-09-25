@@ -1,3 +1,8 @@
+/*
+MSSV: 22520772
+Full name: Nguyen Thi Huyen Linh
+In-Class Exercise - Part 1 - Problem 1
+*/
 #include <iostream>
 
 using namespace std;
@@ -5,7 +10,6 @@ class node
 {public:
     int data;
     node *next;
-
     node(int x)
     {
         data = x;
@@ -17,21 +21,6 @@ class LinkedList
     node *Head = nullptr;
     node *Tail = nullptr;
 };
-void printList(LinkedList l)
-{
-    if(l.Head == nullptr) cout<<"Linked List is empty."<<'\n';
-    else
-    {
-        node *p = l.Head;
-        cout<<"The Linked List is: ";
-        while(p!=nullptr)
-        {
-            cout<<p->data<<" ";
-            p = p->next;
-        }
-        cout<<'\n';
-    }
-}
 //Insert a Node to LinkedList
 void addNode(LinkedList &l, int x) //add a Node with data x
 {
@@ -56,7 +45,7 @@ int elementNode(LinkedList l) //return the number element of LinkedList
     return cnt;
 }
 //Find the Middle Node of a Linked List
-void MiddleNode(LinkedList l) //return a Middle node of the linked list
+void MiddleNode(LinkedList l) 
 {
     int num = elementNode(l);
     node *tmp=l.Head;
@@ -72,10 +61,8 @@ void MiddleNode(LinkedList l) //return a Middle node of the linked list
 
 }
 
-//Detect a Cycle in a Linked List
 int main()
 {
-    freopen("exer.inp","r",stdin);
     LinkedList l;
     int x;
     cout<<"Enter the data element until enter 0: \n";
@@ -87,12 +74,6 @@ int main()
     }
     cout << "The Middle Node is: ";
     MiddleNode(l);
-//     Node* Middle=FindMiddleNode(head);
-//    if (Middle) {
-//        cout << "The middle node value is: " << Middle->data << endl;
-//    }
-//    else {
-//        cout << "The list is empty." << endl;
-//    }
+
     return 0;
 }
