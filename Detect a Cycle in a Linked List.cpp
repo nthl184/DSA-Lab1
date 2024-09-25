@@ -1,3 +1,8 @@
+/*
+MSSV: 22520772
+Full name: Nguyen Thi Huyen Linh
+In-Class Exercise - Part 1 - Problem 2
+*/
 #include <iostream>
 
 using namespace std;
@@ -33,7 +38,7 @@ void printList(LinkedList l)
     }
 }
 //Insert a Node to LinkedList
-void addNode(LinkedList &l, int x) //add a Node with data x (add to tail of list)
+void addNode(LinkedList &l, int x) //(add to tail of list)
 {
     node *newNode = new node(x);
     if(l.Head == nullptr)
@@ -43,17 +48,6 @@ void addNode(LinkedList &l, int x) //add a Node with data x (add to tail of list
     }
     l.Tail->next = newNode;
     l.Tail = newNode;
-}
-int elementNode(LinkedList l) //return the number element of LinkedList
-{
-    int cnt = 1;
-    node *tmp=l.Head;
-    while(tmp->next != nullptr)
-    {
-        cnt++;
-        tmp = tmp->next;
-    }
-    return cnt;
 }
 
 //Detect a Cycle in a Linked List
@@ -74,7 +68,7 @@ bool hasCycle(LinkedList l)
 }
 int main()
 {
-    freopen("exer.inp","r",stdin);
+    //freopen("exer.inp","r",stdin);
     LinkedList l;
     int x;
     cout<<"Enter the data element until enter 0: \n";
